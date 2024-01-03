@@ -1,0 +1,6 @@
+class Setup:
+    def check_setup(self) -> bool:
+        ...
+
+    def setup(self) -> None:
+        ...
