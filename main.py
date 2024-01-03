@@ -1,4 +1,4 @@
-from src import app
+from src import app, Setup
 
 
 if __name__ == "__main__":
