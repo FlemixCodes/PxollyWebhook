@@ -1,4 +1,5 @@
 from flask import Flask, request
+from events import Event
 
 
 app = Flask(__name__)
@@ -8,3 +9,4 @@ app = Flask(__name__)
 def callback_route():
     if request.is_json:
         data = request.json
+        event = Event(data)
