@@ -12,5 +12,5 @@ class EventManager:
     
     def use_event(self, name: str, event: Event):
         if name in self.events:
-            return self.events[name]()
+            return self.events[name](event)
         return
