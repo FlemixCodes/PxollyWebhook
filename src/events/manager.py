@@ -11,7 +11,7 @@ class EventManager:
             self.events[name] = func
         return wrapper
     
-    def use_event(self, name: str, event: Event, vk: Vk):
-        if name in self.events:
-            return self.events[name](event, vk)
+    def use_event(self, event: Event, vk: Vk):
+        if event.type in self.events:
+            return self.events[event.type](event, vk)
         return
