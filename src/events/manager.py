@@ -1,4 +1,5 @@
-from .objects import Event 
+from .objects import Event
+from ..vk import Vk
 
 
 class EventManager:
@@ -10,7 +11,7 @@ class EventManager:
             self.events[name] = func
         return wrapper
     
-    def use_event(self, name: str, event: Event):
+    def use_event(self, name: str, event: Event, vk: Vk):
         if name in self.events:
-            return self.events[name](event)
+            return self.events[name](event, vk)
         return
